@@ -1,0 +1,181 @@
+.section, .header, .ad, .product {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.section__content, .header__content, .ad__content {
+  max-width: 1200px;
+  width: 100%;
+}
+@media all and (width < 1440px) {
+  .section__content, .header__content, .ad__content {
+    max-width: 1100px;
+  }
+}
+@media all and (width < 1260px) {
+  .section__content, .header__content, .ad__content {
+    max-width: 900px;
+  }
+}
+@media all and (width < 1000px) {
+  .section__content, .header__content, .ad__content {
+    max-width: 700px;
+  }
+}
+@media all and (width < 620px) {
+  .section__content, .header__content, .ad__content {
+    max-width: 500px;
+  }
+}
+
+.header {
+  background-color: #454545;
+}
+
+.header__content {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+}
+
+.header__block {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.header__icon {
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header__icon:hover {
+  opacity: 0.7;
+}
+.header__icon:active {
+  opacity: 0.3;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #DADADA;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header__link:hover {
+  opacity: 0.7;
+}
+.header__link:active {
+  opacity: 0.3;
+}
+
+.header__link {
+  font-size: 12px;
+}
+
+.ad__content {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+}
+
+.ad__text {
+  color: #1D1D1F;
+  font-size: 14px;
+}
+
+.ad__url {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.product {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.product__content {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+.product__title {
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.product__description {
+  font-size: 28px;
+}
+
+.product__action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  transition: opacity 0.7s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.product__action:hover {
+  opacity: 0.7;
+}
+.product__action:active {
+  opacity: 0.3;
+}
+
+.product__link {
+  color: #0066CC;
+}
+.product__link::after {
+  content: ">";
+  margin-left: 8px;
+}
+
+.product__big {
+  max-height: 700px;
+  height: 100vh;
+  background-size: cover;
+}
+@media all and (width < 1000px) {
+  .product__big {
+    background-size: 150%;
+    max-height: 500px;
+  }
+}
+
+.product--iphone-pro {
+  background-image: url("/img/iphone_pro.png");
+}
+
+.product--iphone {
+  background-image: url("/img/iphone.png");
+}
+
+.product--iwatch {
+  background-image: url("/img/iwatch.png");
+}
+
+.product--dark .product__title, .product--dark .product__description {
+  color: #F5F5F7;
+  background-color: #000;
+}
+
+.product--top product__content {
+  align-content: flex-start;
+}
+
+.product--buttom product__content {
+  align-content: flex-end;
+}
+
+.product--light .product__title, .product--light .product__description {
+  color: #1D1D1F;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
